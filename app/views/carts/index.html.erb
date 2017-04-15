@@ -10,8 +10,9 @@
   </thead>
 
   <tbody>
-    <% @carts.each do |cart| %>
+    <% @carts.each_with_index do |cart, id| %>
       <tr>
+        <td>Cart number: <%= id + 1 %></td>
         <td><%= link_to 'Show', cart %></td>
         <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
         <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>

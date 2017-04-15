@@ -8,23 +8,22 @@
   </head>
   <body class="<%= controller.controller_name %>">
     <div id="banner">
-      <%= image_tag("expfront.jpg") %>
+      <div class="logo">
+        <%= image_tag("expfront.jpg") %>
+      </div>
       <%= @page_title || "Pragmatic Bookshelf" %>
     </div>
     <div id="columns">
       <div id="side">
         <ul>
           <li>
-            <a href="http://www....">Home</a>
+            <%= link_to 'Store', store_path %>
           </li>
           <li>
-            <a href="http://www..../faq">Questions</a>
+            <%= link_to 'Products', products_path %>
           </li>
           <li>
-            <a href="http://www..../news">News</a>
-          </li>
-          <li>
-            <a href="http://www..../contact">Contact</a>
+            <%= link_to 'Carts', carts_path %>
           </li>
         </ul>
       </div>
